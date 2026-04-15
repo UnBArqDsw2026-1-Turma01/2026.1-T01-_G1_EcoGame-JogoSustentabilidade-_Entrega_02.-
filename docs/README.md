@@ -1,4 +1,5 @@
-# 🌱 EcoGame
+# <img src="https://raw.githubusercontent.com/UnBArqDsw2026-1-Turma01/2026.1-T01-_G1_EcoGame-JogoSustentabilidade-_Entrega_02.-/refs/heads/main/docs/imagens/icone.gif" alt="icone" width="50"> EcoGame
+
 
 Esse repositório é para ser utilizado pelos grupos como um template inicial.
 As seções do Template NÃO DEVEM SER OMITIDAS, sendo TODAS RELEVANTES.

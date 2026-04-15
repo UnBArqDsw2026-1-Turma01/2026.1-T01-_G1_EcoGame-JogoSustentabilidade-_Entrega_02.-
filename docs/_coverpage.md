@@ -1,6 +1,6 @@
 
 <p align="center">
-  <img src="./assets/logo.jpg" alt="logo" width="200" style="border-radius: 50%;" />
+  <img src="https://raw.githubusercontent.com/UnBArqDsw2026-1-Turma01/2026.1-T01-_G1_EcoGame-JogoSustentabilidade-_Entrega_02.-/refs/heads/main/docs/imagens/icone.gif" alt="logo" width="200" />
 </p>
 
 
@@ -9,4 +9,4 @@
 > Um jogo de sustentabilidade
 
 [GitHub](https://github.com/UnBArqDsw2026-1-Turma01/2026.1-T01-_G1_EcoGame-JogoSustentabilidade-_Entrega_02.-)
-[Acesse a documentação](#🌱-ecogame)
+[Acesse a documentação](#-ecogame)
