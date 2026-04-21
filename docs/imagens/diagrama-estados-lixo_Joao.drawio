@@ -1,0 +1,212 @@
+<mxfile host="app.diagrams.net" agent="draw.io">
+  <diagram name="Diagrama de Estados - Lixo" id="estados-lixo">
+    <mxGraphModel dx="1716" dy="1019" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="1600" pageHeight="1000" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="titulo" parent="1" style="text;html=1;fontSize=18;fontStyle=1;fontFamily=Helvetica;align=left;" value="Diagrama de Estados — Objeto: Lixo" vertex="1">
+          <mxGeometry height="30" width="500" x="40" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="subtitulo" parent="1" style="text;html=1;fontSize=11;fontStyle=2;fontFamily=Helvetica;align=left;fontColor=#666666;" value="Modela o ciclo de vida de um item de lixo no sistema EcoGame (RF02, RF03, RF04, RF05, RF06)" vertex="1">
+          <mxGeometry height="20" width="600" x="40" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="start" parent="1" style="ellipse;html=1;aspect=fixed;fillColor=light-dark(#000000,#000000);strokeColor=#000000;" value="" vertex="1">
+          <mxGeometry height="30" width="30" x="40" y="135" as="geometry" />
+        </mxCell>
+        <mxCell id="disponivel" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=13;fontStyle=1;" value="Disponível no Mapa" vertex="1">
+          <mxGeometry height="70" width="200" x="180" y="115" as="geometry" />
+        </mxCell>
+        <mxCell id="disponivel_detail" parent="1" style="text;html=1;fontSize=9;fontFamily=Helvetica;align=left;fontColor=#666666;fontStyle=2;" value="entry / renderizarNoMapa()&#xa;do / aguardarInteracao()" vertex="1">
+          <mxGeometry height="30" width="190" x="185" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="t_start_disponivel" edge="1" parent="1" source="start" style="rounded=1;html=1;endArrow=open;endSize=8;" target="disponivel">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="t_start_label" connectable="0" parent="t_start_disponivel" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=9;" value="gerarLixo()&#xa;/ posicionarNoMapa()" vertex="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint y="-15" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="aguardando_ferr" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=12;" value="Aguardando&#xa;Ferramenta" vertex="1">
+          <mxGeometry height="60" width="200" x="180" y="330" as="geometry" />
+        </mxCell>
+        <mxCell id="t_disp_aguard" edge="1" parent="1" source="disponivel" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=open;endSize=8;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="aguardando_ferr">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="t_disp_aguard_label" connectable="0" parent="t_disp_aguard" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=9;" value="jogadorInteragir()&#xa;[precisaFerramenta == true]" vertex="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-20" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sendo_coletado" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=13;fontStyle=1;" value="Sendo Coletado" vertex="1">
+          <mxGeometry height="70" width="200" x="500" y="115" as="geometry" />
+        </mxCell>
+        <mxCell id="coletado_detail" parent="1" style="text;html=1;fontSize=9;fontFamily=Helvetica;align=left;fontColor=#666666;fontStyle=2;" value="entry / reproduzirAnimacaoColeta()&#xa;do / removerDoMapa()" vertex="1">
+          <mxGeometry height="30" width="190" x="505" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="t_disp_colet" edge="1" parent="1" source="disponivel" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=open;endSize=8;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;" target="sendo_coletado">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="t_disp_colet_label" connectable="0" parent="t_disp_colet" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=9;" value="jogadorInteragir()&#xa;[precisaFerramenta == false]" vertex="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint y="-15" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="t_aguard_colet" edge="1" parent="1" source="aguardando_ferr" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=open;endSize=8;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.75;entryDx=0;entryDy=0;" target="sendo_coletado">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="t_aguard_colet_label" connectable="0" parent="t_aguard_colet" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=9;" value="usarFerramenta()&#xa;[ferramentaCorreta]&#xa;/ quebrarObstaculo()" vertex="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint y="-4" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="t_aguard_disp" edge="1" parent="1" source="aguardando_ferr" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=open;endSize=8;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.75;entryDx=0;entryDy=0;" target="disponivel">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="140" y="360" />
+              <mxPoint x="140" y="168" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="t_aguard_disp_label" connectable="0" parent="t_aguard_disp" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=9;" value="jogadorAfastar()" vertex="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-15" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="no_inventario" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=13;fontStyle=1;" value="No Inventário" vertex="1">
+          <mxGeometry height="70" width="200" x="820" y="115" as="geometry" />
+        </mxCell>
+        <mxCell id="inv_detail" parent="1" style="text;html=1;fontSize=9;fontFamily=Helvetica;align=left;fontColor=#666666;fontStyle=2;" value="entry / adicionarAoInventario()&#xa;do / ocuparEspaco()" vertex="1">
+          <mxGeometry height="30" width="190" x="825" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="t_colet_inv" edge="1" parent="1" source="sendo_coletado" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=open;endSize=8;" target="no_inventario">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="t_colet_inv_label" connectable="0" parent="t_colet_inv" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=9;" value="coletaConcluida()&#xa;[inventarioTemEspaco]&#xa;/ setEstaRemovido(true)" vertex="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint y="-20" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sendo_reciclado" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=13;fontStyle=1;" value="Sendo Reciclado" vertex="1">
+          <mxGeometry height="70" width="200" x="820" y="280" as="geometry" />
+        </mxCell>
+        <mxCell id="recic_detail" parent="1" style="text;html=1;fontSize=9;fontFamily=Helvetica;align=left;fontColor=#666666;fontStyle=2;" value="entry / inserirNaMaquina()&#xa;do / processarMaterial()" vertex="1">
+          <mxGeometry height="30" width="190" x="825" y="315" as="geometry" />
+        </mxCell>
+        <mxCell id="t_inv_recic" edge="1" parent="1" source="no_inventario" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=open;endSize=8;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="sendo_reciclado">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="t_inv_recic_label" connectable="0" parent="t_inv_recic" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=9;" value="inserirNaMaquinaReciclagem()&#xa;[maquinaDisponivel]" vertex="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="transformado" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=12;" value="Transformado&#xa;(Material Reciclado)" vertex="1">
+          <mxGeometry height="70" width="200" x="820" y="435" as="geometry" />
+        </mxCell>
+        <mxCell id="transf_detail" parent="1" style="text;html=1;fontSize=9;fontFamily=Helvetica;align=left;fontColor=#666666;fontStyle=2;" value="entry / gerarMaterial()&#xa;exit / removerLixoOriginal()" vertex="1">
+          <mxGeometry height="30" width="190" x="825" y="475" as="geometry" />
+        </mxCell>
+        <mxCell id="t_recic_transf" edge="1" parent="1" source="sendo_reciclado" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=open;endSize=8;" target="transformado">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="t_recic_transf_label" connectable="0" parent="t_recic_transf" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=9;" value="reciclagemConcluida()&#xa;/ gerarMaterial()" vertex="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint y="5" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="vendido" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=12;" value="Vendido" vertex="1">
+          <mxGeometry height="60" width="160" x="1140" y="115" as="geometry" />
+        </mxCell>
+        <mxCell id="t_inv_vendido" edge="1" parent="1" source="no_inventario" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=open;endSize=8;" target="vendido">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1100" y="150" />
+              <mxPoint x="1100" y="150" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="t_inv_vendido_label" connectable="0" parent="t_inv_vendido" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=9;" value="venderItem()&#xa;/ adicionarMoedas()" vertex="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint y="-15" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="usado_craft" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=12;" value="Utilizado em Craft" vertex="1">
+          <mxGeometry height="60" width="160" x="1140" y="440" as="geometry" />
+        </mxCell>
+        <mxCell id="t_transf_craft" edge="1" parent="1" source="transformado" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=open;endSize=8;" target="usado_craft">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="t_transf_craft_label" connectable="0" parent="t_transf_craft" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=9;" value="realizarCraft()&#xa;[receitaValida]&#xa;/ consumirMaterial()" vertex="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint y="-20" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="t_vendido_end" edge="1" parent="1" source="vendido" style="rounded=1;html=1;endArrow=open;endSize=8;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="FKEjz1Muf3s6x4w-Mgwm-4">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1400" y="145" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="t_vendido_end_label" connectable="0" parent="t_vendido_end" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=9;" value="removerDoSistema()" vertex="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint y="-10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="t_craft_end" edge="1" parent="1" source="usado_craft" style="rounded=1;html=1;endArrow=open;endSize=8;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1430.0000000000055" y="470" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="t_craft_end_label" connectable="0" parent="t_craft_end" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=9;" value="removerDoSistema()" vertex="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint y="-10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="descartado" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=11;fontStyle=2;" value="Descartado&#xa;(Inventário Cheio)" vertex="1">
+          <mxGeometry height="60" width="180" x="500" y="280" as="geometry" />
+        </mxCell>
+        <mxCell id="t_colet_descart" edge="1" parent="1" source="sendo_coletado" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=open;endSize=8;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.562;entryY=-0.006;entryDx=0;entryDy=0;entryPerimeter=0;" target="descartado">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="601" y="185" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="t_colet_descart_label" connectable="0" parent="t_colet_descart" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=9;" value="coletaConcluida()&#xa;[inventarioCheio]" vertex="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="9" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="t_descart_disp" edge="1" parent="1" source="descartado" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=open;endSize=8;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.75;entryY=1;entryDx=0;entryDy=0;" target="disponivel">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="420" y="310" />
+              <mxPoint x="330" y="310" />
+              <mxPoint x="330" y="185" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="t_descart_disp_label" connectable="0" parent="t_descart_disp" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=9;" value="manterNoMapa()" vertex="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="legenda" parent="1" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;size=15;fillColor=#ffffcc;strokeColor=#d6b656;fontSize=10;align=left;spacingLeft=8;spacingTop=5;fontFamily=Helvetica;" value="LEGENDA&#xa;&#xa;● Pseudo-estado inicial&#xa;◉ Estado final&#xa;&#xa;Transições:&#xa;evento() [guarda] / ação()&#xa;&#xa;Ações internas:&#xa;entry / ação ao entrar&#xa;do / ação durante&#xa;exit / ação ao sair&#xa;&#xa;Rastreabilidade:&#xa;RF02 — Coletar resíduos&#xa;RF03 — Tipos de lixo&#xa;RF04 — Remoção do cenário&#xa;RF05 — Reciclagem&#xa;RF06 — Craft&#xa;RF29/30 — Venda" vertex="1">
+          <mxGeometry height="340" width="230" x="470" y="370" as="geometry" />
+        </mxCell>
+        <mxCell id="FKEjz1Muf3s6x4w-Mgwm-2" parent="1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" value="" vertex="1">
+          <mxGeometry height="55" width="55" x="1430" y="442.5" as="geometry" />
+        </mxCell>
+        <mxCell id="FKEjz1Muf3s6x4w-Mgwm-3" parent="1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" value="" vertex="1">
+          <mxGeometry height="35" width="35" x="1440" y="452.5" as="geometry" />
+        </mxCell>
+        <mxCell id="FKEjz1Muf3s6x4w-Mgwm-4" parent="1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" value="" vertex="1">
+          <mxGeometry height="55" width="55" x="1420" y="117.5" as="geometry" />
+        </mxCell>
+        <mxCell id="FKEjz1Muf3s6x4w-Mgwm-5" parent="1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" value="" vertex="1">
+          <mxGeometry height="35" width="35" x="1430" y="127.5" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
