@@ -1,0 +1,29 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Página-1" id="5ZdH31v9T76V24ZWPNhn">
+    <mxGraphModel dx="885" dy="518" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="zA9Wsje3ghNWWUclfRF5-1" parent="1" style="html=1;dropTarget=0;whiteSpace=wrap;" value="&amp;laquo;Annotation&amp;raquo;&lt;br/&gt;&lt;b&gt;Component&lt;/b&gt;" vertex="1">
+          <mxGeometry height="90" width="180" x="120" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="zA9Wsje3ghNWWUclfRF5-2" parent="zA9Wsje3ghNWWUclfRF5-1" style="shape=module;jettyWidth=8;jettyHeight=4;" value="" vertex="1">
+          <mxGeometry height="20" relative="1" width="20" x="1" as="geometry">
+            <mxPoint x="-27" y="7" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="zA9Wsje3ghNWWUclfRF5-3" parent="1" style="shape=module;align=left;spacingLeft=20;align=center;verticalAlign=top;whiteSpace=wrap;html=1;" value="Module" vertex="1">
+          <mxGeometry height="50" width="100" x="90" y="250" as="geometry" />
+        </mxCell>
+        <mxCell id="zA9Wsje3ghNWWUclfRF5-4" parent="1" style="align=left;overflow=fill;html=1;dropTarget=0;whiteSpace=wrap;" value="&lt;p style=&quot;margin:0px;margin-top:6px;text-align:center;&quot;&gt;&lt;b&gt;Component&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;/&gt;&lt;p style=&quot;margin:0px;margin-left:8px;&quot;&gt;+ Attribute1: Type&lt;br/&gt;+ Attribute2: Type&lt;/p&gt;" vertex="1">
+          <mxGeometry height="90" width="180" x="260" y="250" as="geometry" />
+        </mxCell>
+        <mxCell id="zA9Wsje3ghNWWUclfRF5-5" parent="zA9Wsje3ghNWWUclfRF5-4" style="shape=component;jettyWidth=8;jettyHeight=4;" value="" vertex="1">
+          <mxGeometry height="20" relative="1" width="20" x="1" as="geometry">
+            <mxPoint x="-24" y="4" as="offset" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
