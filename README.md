@@ -4,7 +4,8 @@ Este repositório contem a segunda entrega do grupo 1, contendo diagramas estát
 
 ## Introdução
 
-Este repositório traz um template de repo de documentação a ser seguido pelos grupos de arquitetura e desenho de software.
+Aqui estão organizados os principais artefatos de modelagem do sistema, incluindo diagramas de caso de uso, estados, componentes e classes. Esses diagramas foram elaborados com o objetivo de representar de forma clara a estrutura, o comportamento e as interações do sistema, servindo tanto como apoio ao desenvolvimento quanto como material de estudo para compreensão dos conceitos de arquitetura de software aplicados a um projeto real. 
+Todos os alunos tiveram participações na construção de todos os focos desse repositorio para que tivessem um conhecimento prático em todas as areás desse entrega, os graficos foram utilizados usando a ferramenta Draw.io pela sua facilidade de compartilhamento de arquivos facilitando a interação entre os estudantes.
 
 ## Membros do grupo
 <table>
